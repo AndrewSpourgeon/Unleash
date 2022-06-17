@@ -361,13 +361,26 @@ class HomePageState extends State<HomePage> {
                           size: sheight / 40,
                         ),
                         buttonColor: Colors.pinkAccent,
-                        onPress: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => Favourite(),
-                            ),
-                          );
+                        onPress: () async {
+                          await getCount();
+                          LoginPageState loginPageState = LoginPageState();
+                          if (countFav != 0 &&
+                              await loginPageState.checkUser()) {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => Favourite(),
+                              ),
+                            );
+                          } else {
+                            Fluttertoast.showToast(
+                              msg: 'You do not have any favourites',
+                              fontSize: 20,
+                              gravity: ToastGravity.CENTER,
+                              backgroundColor: Colors.red.shade900,
+                              textColor: Colors.white,
+                            );
+                          }
                         },
                       ),
                       new RadialButton(
