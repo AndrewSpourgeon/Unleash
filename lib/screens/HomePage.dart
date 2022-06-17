@@ -17,6 +17,7 @@ import 'package:snap_book/screens/CreatorPage.dart';
 import 'package:snap_book/screens/FavouritesPage.dart';
 import 'package:snap_book/screens/LoginPage.dart';
 import 'package:snap_book/service/Api.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class OnBoardingPage extends StatelessWidget {
   @override
@@ -411,7 +412,9 @@ class HomePageState extends State<HomePage> {
                           size: sheight / 40,
                         ),
                         buttonColor: Colors.redAccent,
-                        onPress: () {},
+                        onPress: () {
+                          launch('https://github.com/AndrewSpourgeon/Unleash');
+                        },
                       ),
                       new RadialButton(
                         icon: Icon(
