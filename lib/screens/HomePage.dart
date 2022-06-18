@@ -208,14 +208,23 @@ class HomePageState extends State<HomePage> {
                 ),
               ),
               IconButton(
-                onPressed: () {},
+                onPressed: () {
+                  LoginPageState loginPageState = LoginPageState();
+                  loginPageState.signOut();
+                  Fluttertoast.showToast(
+                      msg: 'You have signed out of your google account',
+                      fontSize: 18,
+                      gravity: ToastGravity.BOTTOM,
+                      backgroundColor: Colors.red.shade900,
+                      textColor: Colors.white);
+                },
                 icon: new Container(
                   width: sheight / 25,
                   height: sheight / 25,
                   child: Icon(
-                    Icons.share,
+                    Icons.person_remove,
                     color: Colors.white,
-                    size: sheight / 45,
+                    size: sheight / 40,
                   ),
                 ),
               ),
@@ -276,6 +285,11 @@ class HomePageState extends State<HomePage> {
                               setState(() {
                                 isFav = true;
                                 addToFavorites(fact);
+                                Fluttertoast.showToast(
+                                  msg: 'Fact added to favorites',
+                                  fontSize: 18,
+                                  gravity: ToastGravity.CENTER,
+                                );
                               });
                             } else {
                               setState(() {

@@ -62,7 +62,7 @@ class FavouriteState extends State<Favourite> {
                             Fluttertoast.showToast(
                                 msg: 'Succesfully deleted all of your Wishlist',
                                 fontSize: 20,
-                                backgroundColor: Colors.green,
+                                backgroundColor: Colors.cyan,
                                 textColor: Colors.black,
                                 gravity: ToastGravity.CENTER);
                           },
