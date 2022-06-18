@@ -7,17 +7,17 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:537649609892:android:775f516243233a558ffa31",
+        "mobilesdk_app_id": "1:537649609892:android:77157b5077bfc47d8ffa31",
         "android_client_info": {
-          "package_name": "com.example.snap_book"
+          "package_name": "com.andrewspourgeon.unleash"
         }
       },
       "oauth_client": [
         {
-          "client_id": "537649609892-rrqp7lvhetstpnn1k7vslc56ketsrldo.apps.googleusercontent.com",
+          "client_id": "537649609892-au70ulgh8k6dsm19iqth1n96lmqk4ia0.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.example.snap_book",
+            "package_name": "com.andrewspourgeon.unleash",
             "certificate_hash": "77799a9d0257aff24dc8ec5df99082a0e5db311f"
           }
         },
